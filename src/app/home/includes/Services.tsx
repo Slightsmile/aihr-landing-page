@@ -13,7 +13,7 @@ import awardSmImg from '@/app/static/images/landing_page/award_sm.png';
 
 export default function Services() {
   return (
-    <section className='px-4 md:px-8 lg:px-35 relative py-8 md:py-12'>
+    <section className='px-4 md:px-8 lg:px-35 relative py-8 md:py-12 bg-gray-950'>
         <div className="animate-pulse absolute -top-20 right-0 w-96 h-96 md:w-96 md:h-96 bg-[#141e14] rounded-full blur-3xl"></div>
         {/* header section */}
         <div className='relative flex flex-col items-center justify-center text-center'>

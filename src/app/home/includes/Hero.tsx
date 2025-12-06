@@ -9,7 +9,7 @@ const Hero = () => {
     router.push('/services');
   };
   return (
-    <section className="min-h-screen flex flex-col md:flex-col lg:flex-row justify-between items-center py-10 pt-0 relative overflow-hidden">
+    <section className="min-h-screen flex flex-col md:flex-col lg:flex-row justify-between items-center py-10 pt-0 relative overflow-hidden bg-gray-950">
       {/* Background blur elements */}
       <div className="animate-pulse absolute bottom-0 right-0 w-96 h-96 bg-[#141e14] rounded-full blur-3xl" />
       <div className="animate-pulse absolute bottom-0 left-0 w-96 h-96 bg-[#161e16] rounded-full blur-3xl" />

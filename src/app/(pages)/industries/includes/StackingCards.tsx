@@ -20,36 +20,68 @@ interface StackingCardsProps {
 
 const defaultCards: CardData[] = [
     {
-        id: '1',
-        title: 'Retail & E-Commerce',
-        description: 'DRC empowers retail and e-commerce businesses with scalable BPO solutions, including order processing, inventory management, and customer support, reducing overhead by up to 40%. Our AI-driven Smart CRM and Digital Engagement Platform enhance customer experiences with personalized marketing and 24/7 omnichannel service, ensuring seamless operations and maximized ROI without infrastructure costs.',
-        color: '#030712',
-        buttonText: 'Boost Retail Growth',
-        icon: <StackingCart />,
+      id: '1',
+      title: 'Retail & E-Commerce',
+      description: 'DRC empowers retail and e-commerce businesses with scalable BPO solutions, including order processing, inventory management, and customer support, reducing overhead by up to 40%. Our AI-driven Smart CRM and Digital Engagement Platform enhance customer experiences with personalized marketing and 24/7 omnichannel service, ensuring seamless operations and maximized ROI without infrastructure costs.',
+      color: '#030712',
+      buttonText: 'Boost Retail Growth',
+      icon: <StackingCart />,
     },
     {
-        id: '2',
-        title: 'Healthcare & Pharma',
-        description: 'Transform your healthcare operations with our specialized BPO services. From patient data management to compliance and billing support, we ensure accuracy and efficiency while maintaining HIPAA compliance and data security.',
-        color: '#030712',
-        buttonText: 'Optimize Healthcare',
-        icon: <StackingCart />,
+      id: '2',
+      title: 'Healthcare & Pharma',
+      description: 'Transform your healthcare operations with our specialized BPO services. From patient data management to compliance and billing support, we ensure accuracy and efficiency while maintaining HIPAA compliance and data security.',
+      color: '#030712',
+      buttonText: 'Optimize Healthcare',
+      icon: <StackingCart />,
     },
     {
-        id: '3',
-        title: 'Financial Services',
-        description: 'Streamline your financial operations with secure, compliant BPO solutions. Our expertise covers loan processing, claims management, and regulatory reporting with industry-leading security standards.',
-        color: '#030712',
-        buttonText: 'Enhance Finance',
-        icon: <StackingCart />,
+      id: '3',
+      title: 'Financial Services',
+      description: 'Streamline your financial operations with secure, compliant BPO solutions. Our expertise covers loan processing, claims management, and regulatory reporting with industry-leading security standards.',
+      color: '#030712',
+      buttonText: 'Enhance Finance',
+      icon: <StackingCart />,
     },
     {
-        id: '4',
-        title: 'Tech & Software',
-        description: 'Accelerate your tech operations with our specialized support services. From customer onboarding to technical support, we help you scale without the overhead of building large in-house teams.',
-        color: '#030712',
-        buttonText: 'Scale Tech Growth',
-        icon: <StackingCart />,
+      id: '4',
+      title: 'Tech & Software',
+      description: 'Accelerate your tech operations with our specialized support services. From customer onboarding to technical support, we help you scale without the overhead of building large in-house teams.',
+      color: '#030712',
+      buttonText: 'Scale Tech Growth',
+      icon: <StackingCart />,
+    },
+    {
+      id: '5',
+      title: 'Education & EdTech',
+      description: 'Empower educational institutions and EdTech companies with advanced BPO solutions for enrollment, student support, and digital learning management. Enhance engagement and streamline operations for better outcomes.',
+      color: '#030712',
+      buttonText: 'Advance Education',
+      icon: <StackingSetting />, 
+    },
+    {
+      id: '6',
+      title: 'Travel & Hospitality',
+      description: 'Deliver exceptional guest experiences with our BPO services for booking, customer care, and loyalty program management. Optimize operations and drive growth in the travel and hospitality sector.',
+      color: '#030712',
+      buttonText: 'Boost Hospitality',
+      icon: <StackingBackdropIcon />, 
+    },
+    {
+      id: '7',
+      title: 'Telecom & Media',
+      description: 'Transform telecom and media operations with scalable support for customer onboarding, technical assistance, and billing. Ensure seamless service delivery and customer satisfaction.',
+      color: '#030712',
+      buttonText: 'Upgrade Telecom',
+      icon: <StackingSetting />, 
+    },
+    {
+      id: '8',
+      title: 'Logistics & Supply Chain',
+      description: 'Optimize logistics and supply chain management with our BPO expertise. From order fulfillment to inventory tracking, we help businesses achieve efficiency and reliability.',
+      color: '#030712',
+      buttonText: 'Streamline Logistics',
+      icon: <StackingBackdropIcon />, 
     },
 ];
 
@@ -131,7 +163,7 @@ const Card: React.FC<CardProps> = ({ index, title, description, color, buttonTex
             {/* Left Content */}
             <div className="w-1/2 relative z-10 flex flex-col gap-6">
               <div className="flex items-start gap-6">
-                <div className="w-28 h-28 rounded-full  flex items-center justify-center  backdrop-blur-sm flex-shrink-0 border-2 border-[#b8c9ba]">
+                <div className="w-28 h-28 rounded-full  flex items-center justify-center  backdrop-blur-sm shrink-0 border-2 border-[#b8c9ba]">
                   <span className="text-4xl">{icon}</span>
                 </div>
                   <h2 className="text-3xl md:text-5xl font-bold leading-tight pt-2">{title}</h2>

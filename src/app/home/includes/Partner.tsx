@@ -1,4 +1,3 @@
-
 'use client';
 import React from 'react';
 import { useRouter } from 'next/navigation';
@@ -12,13 +11,13 @@ export default function Partner() {
     router.push('/about');
   };
   return (
-    <div className='py-10 md:py-10'>
+    <div className='py-10 md:py-10 bg-gray-950'>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-1 relative overflow-hidden">
 
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 mb-12 md:mb-20 relative z-10">
           {/* Left Content */}
           <div className="flex-1 w-full text-center lg:text-left">
-            <div className="inline-block mb-3 sm:mb-4 p-0.5 bg-gradient-to-r  from-[#8a8f8b] to-[#066a0a] rounded-full ">
+            <div className="inline-block mb-3 sm:mb-4 p-0.5 bg-linear-to-r  from-[#8a8f8b] to-[#066a0a] rounded-full ">
                 <div className="px-4 sm:px-3 py-2 sm:py-1 bg-gray-950 rounded-full">
 
                   <span className="text-white text-xs sm:text-sm font-semibold flex items-center gap-2">
@@ -39,9 +38,9 @@ export default function Partner() {
                 Emergency Response.
             </p>
 
-            <div className="p-0.5 bg-gradient-to-r from-[#dbdddc] to-[#39b63e] rounded-full inline-block mx-auto lg:mx-0">
-              <button className="group inline-flex items-center gap-2 md:gap-3 p-[2px] rounded-full bg-gradient-to-r from-[#dcdedd] to-[#3eb343] hover:shadow-lg hover:shadow-green-400/50 transition-all duration-300 transform hover:scale-105 " onClick={handleLearnMoreClick}>
-                  <span className="inline-flex items-center gap-2 md:gap-3 px-6 md:px-8 py-3 md:py-3.5 rounded-full  bg-gradient-to-t from-[#92eb95] via-[#9dffa1] to-[#c3ffc6] text-[#2d4c2e] font-semibold text-sm md:text-base">
+            <div className="p-0.5 bg-linear-to-r from-[#dbdddc] to-[#39b63e] rounded-full inline-block mx-auto lg:mx-0">
+              <button className="group inline-flex items-center gap-2 md:gap-3 p-0.5 rounded-full bg-linear-to-r from-[#dcdedd] to-[#3eb343] hover:shadow-lg hover:shadow-green-400/50 transition-all duration-300 transform hover:scale-105 " onClick={handleLearnMoreClick}>
+                  <span className="inline-flex items-center gap-2 md:gap-3 px-6 md:px-8 py-3 md:py-3.5 rounded-full  bg-linear-to-t from-[#92eb95] via-[#9dffa1] to-[#c3ffc6] text-[#2d4c2e] font-semibold text-sm md:text-base">
                       Learn More
                   </span>
               </button>

@@ -73,7 +73,7 @@ const NavBar = () => {
         </button> */}
 
                 {/* Mobile Hamburger Menu */}
-                <div className='md:hidden flex-shrink-0'>
+                <div className='md:hidden shrink-0'>
                     <button
                         onClick={toggleMenu}
                         className='flex flex-col gap-1.5 w-8 h-8 justify-center items-center focus:outline-none'
