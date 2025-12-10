@@ -21,19 +21,22 @@ const NavBar = () => {
 
             <div className='flex justify-between items-center px-6 md:px-20 py-6'>
                 {/* Logo */}
-               <div className="pointer-events-auto z-50">
+                <div className="pointer-events-auto z-50">
                     <Link href="/" className="cursor-pointer hover:opacity-90 transition ">
                         <Image src="/images/logo.png" alt="Logo" width={56} height={40} priority />
                     </Link>
                 </div>
 
-               
+
 
                 {/* Desktop Menu */}
                 <div className='hidden md:flex flex-1 justify-center'>
                     <ul className='flex gap-10 text-sm font-medium'>
                         <li className='hover:text-green-400 cursor-pointer transition'>
-                            <Link href="/" className='cursor-pointer'>Home</Link>
+                            <Link href="/aihr" className='cursor-pointer'>AIHR</Link>
+                        </li>
+                        <li className='hover:text-green-400 cursor-pointer transition'>
+                            <Link href="/pricing" className='cursor-pointer'>Pricing</Link>
                         </li>
                         <li className='hover:text-green-400 transition'>
                             <Link href="/about" className='cursor-pointer'>About Us</Link>
@@ -50,12 +53,12 @@ const NavBar = () => {
                         </li>
                         <li className='hover:text-green-400 cursor-pointer transition'>
                             <Link href="/career" className='cursor-pointer'>Careers</Link>
-                            </li>
+                        </li>
                         <li className='hover:text-green-400 cursor-pointer transition'>
                             <Link href="/contact" className='cursor-pointer'>Contact Us</Link>
                         </li>
                         <li className='hover:text-green-400 cursor-pointer transition'>
-                            <Link href="/aihr" className='cursor-pointer'>AIHR</Link>
+                            <Link href="/" className='cursor-pointer'>Home</Link>
                         </li>
                     </ul>
                 </div>
@@ -91,8 +94,11 @@ const NavBar = () => {
                 <div className='px-6 pb-6 pt-2 bg-gray-950'>
                     <ul className='flex flex-col gap-4 text-sm font-medium'>
                         <li className='hover:text-green-400 cursor-pointer transition py-2 border-b border-gray-800'>
-                            <Link href="/" className='cursor-pointer' onClick={closeMenu}>Home</Link>
-                            </li>
+                            <Link href="/aihr" className='cursor-pointer' onClick={closeMenu}>AIHR</Link>
+                        </li>
+                        <li className='hover:text-green-400 cursor-pointer transition py-2 border-b border-gray-800'>
+                            <Link href="/pricing" className='cursor-pointer' onClick={closeMenu}>Pricing</Link>
+                        </li>
                         <li className='hover:text-green-400 transition py-2 border-b border-gray-800'>
                             <Link href="/about" className='cursor-pointer' onClick={closeMenu}>About Us</Link>
                         </li>
@@ -109,7 +115,7 @@ const NavBar = () => {
                             <Link href="/contact" className='cursor-pointer' onClick={closeMenu}>Contact Us</Link>
                         </li>
                         <li className='hover:text-green-400 cursor-pointer transition py-2 border-b border-gray-800'>
-                            <Link href="/aihr" className='cursor-pointer' onClick={closeMenu}>AIHR</Link>
+                            <Link href="/" className='cursor-pointer' onClick={closeMenu}>Home</Link>
                         </li>
                     </ul>
                     <button className='bg-[#90EE90] hover:bg-[#7FD87F] text-black px-4 py-2 rounded-full font-medium transition duration-300 w-full mt-4'>

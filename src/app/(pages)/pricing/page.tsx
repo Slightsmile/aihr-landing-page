@@ -1,9 +1,9 @@
 import React from 'react';
 import PricingHero from './includes/PricingHero';
 import PricingCards from './includes/PricingCards';
+import PricingCalculator from './includes/PricingCalculator';
 import FeatureComparison from './includes/FeatureComparison';
 import Guarantees from './includes/Guarantees';
-import Footer from '@/app/components/footer/Footer';
 
 export default function PricingPage() {
     return (
@@ -11,8 +11,8 @@ export default function PricingPage() {
             <PricingHero />
             <PricingCards />
             <FeatureComparison />
+            <PricingCalculator />
             <Guarantees />
-            <Footer />
         </div>
     );
 }
