@@ -1,16 +1,14 @@
-// Copy of homepage for AIHR
-import Hero from '../home/includes/Hero';
+// AIHR Page with HR-focused content
+import AIHRHero from './includes/AIHRHero';
 import StackingCards from './StackingCardsClient';
-import SaasAiInnovation from '../home/includes/SaasAiInnovation';
+import AIHRInnovation from './includes/AIHRInnovation';
 import Partner from '../home/includes/Partner';
-import Services from '../home/includes/Services';
 
 export default function AIHRPage() {
   return (
     <div>
-      <Hero />
-      <SaasAiInnovation />
-      <Services />
+      <AIHRHero />
+      <AIHRInnovation />
       <StackingCards />
       <Partner />
     </div>

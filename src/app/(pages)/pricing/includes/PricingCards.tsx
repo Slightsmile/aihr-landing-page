@@ -69,7 +69,7 @@ const PricingCards = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             className={`relative bg-gray-900 rounded-3xl p-8 border-2 ${tier.popular ? 'border-[#63a567]' : 'border-gray-800'
-                                } hover:border-[#63a567] transition-all duration-300 hover:scale-105`}
+                                } hover:border-[#63a567] transition-all duration-300 hover:scale-105 flex flex-col`}
                         >
                             {tier.popular && (
                                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#63a567] text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -89,7 +89,7 @@ const PricingCards = () => {
                                 </div>
                             </div>
 
-                            <div className="mb-8">
+                            <div className="mb-8 flex-grow">
                                 <p className="text-sm font-semibold text-gray-300 mb-4">Includes</p>
                                 <ul className="space-y-3">
                                     {tier.features.map((feature, idx) => (
@@ -116,9 +116,9 @@ const PricingCards = () => {
                             <motion.button
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
-                                className={`w-full py-3 px-6 rounded-full font-semibold transition-all ${tier.popular
-                                        ? 'bg-[#63a567] text-white hover:bg-[#5a9460]'
-                                        : 'bg-gray-800 text-white hover:bg-gray-700 border border-gray-700'
+                                className={`w-full py-3 px-6 rounded-full font-semibold transition-all mt-auto ${tier.popular
+                                    ? 'bg-[#63a567] text-white hover:bg-[#5a9460]'
+                                    : 'bg-gray-800 text-white hover:bg-gray-700 border border-gray-700'
                                     }`}
                             >
                                 Get Started

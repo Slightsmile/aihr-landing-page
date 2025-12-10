@@ -3,6 +3,7 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { StackingCart, StackingSetting, StackingBackdropIcon } from '@/app/static/icons';
+import Link from 'next/link';
 
 
 interface CardData {
@@ -25,7 +26,7 @@ const defaultCards: CardData[] = [
     description: 'AI scans CVs, matches candidates to job descriptions, and analyzes video interviews to streamline hiring.',
     color: '#030712',
     buttonText: 'Explore Offers',
-    icon: <StackingCart />,
+    icon: <span>🎯</span>,
   },
   {
     id: '2',
@@ -33,7 +34,7 @@ const defaultCards: CardData[] = [
     description: 'AI provides personalized onboarding through chatbots, guiding new hires through paperwork, training, and compliance.',
     color: '#030712',
     buttonText: 'Explore Offers',
-    icon: <StackingCart />,
+    icon: <span>🤝</span>,
   },
   {
     id: '3',
@@ -41,7 +42,7 @@ const defaultCards: CardData[] = [
     description: 'AI predicts attrition risks and suggests interventions to retain top talent.',
     color: '#030712',
     buttonText: 'Explore Offers',
-    icon: <StackingCart />,
+    icon: <span>💚</span>,
   },
   {
     id: '4',
@@ -49,7 +50,7 @@ const defaultCards: CardData[] = [
     description: 'AI offers data-driven evaluations, detects burnout, and reduces bias in performance reviews.',
     color: '#030712',
     buttonText: 'Explore Offers',
-    icon: <StackingCart />,
+    icon: <span>📊</span>,
   },
   {
     id: '5',
@@ -57,7 +58,7 @@ const defaultCards: CardData[] = [
     description: 'AI personalizes training by identifying skill gaps and recommending adaptive learning modules.',
     color: '#030712',
     buttonText: 'Explore Offers',
-    icon: <StackingCart />,
+    icon: <span>📚</span>,
   },
   {
     id: '6',
@@ -65,7 +66,7 @@ const defaultCards: CardData[] = [
     description: 'AI ensures fairness by reducing bias in hiring, promotions, and job descriptions.',
     color: '#030712',
     buttonText: 'Explore Offers',
-    icon: <StackingCart />,
+    icon: <span>🌈</span>,
   },
   {
     id: '7',
@@ -73,7 +74,7 @@ const defaultCards: CardData[] = [
     description: 'AI-powered chatbots answer HR queries instantly, reducing support costs.',
     color: '#030712',
     buttonText: 'Explore Offers',
-    icon: <StackingCart />,
+    icon: <span>💬</span>,
   },
   {
     id: '8',
@@ -81,7 +82,7 @@ const defaultCards: CardData[] = [
     description: 'AI predicts workforce needs, helping HR align staffing with business strategy.',
     color: '#030712',
     buttonText: 'Explore Offers',
-    icon: <StackingCart />,
+    icon: <span>🔮</span>,
   },
 ];
 
@@ -93,7 +94,7 @@ const StackingCards: React.FC<StackingCardsProps> = ({ cards = defaultCards }) =
   });
 
   return (
-    <div ref={container} className="relative bg-gray-950">
+    <div id="features" ref={container} className="relative bg-gray-950">
       {cards.map((card, i) => {
         const targetScale = 1 - (cards.length - i) * 0.05;
         // Calculate range dynamically to ensure consistent behavior for all cards
@@ -172,25 +173,21 @@ const Card: React.FC<CardProps> = ({ index, title, description, color, buttonTex
           </div>
           <p className="text-sm md:text-base leading-relaxed text-white/90 pr-4">{description}</p>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-3 mt-4 px-8 py-3 rounded-full transition-all w-fit text-sm md:text-base font-semibold"
-            style={{ background: 'linear-gradient(135deg, #5e5e5e, #074a0a)', padding: '2px', borderRadius: '9999px', }}
-
-          >
-            <span className="inline-flex items-center gap-3 px-8 py-3 rounded-full bg-black/80" style={{ background: 'rgba(0, 0, 0, 0.8)' }}>
-              {buttonText}
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="#ffffff" strokeWidth="1.5" />
-                <path d="M12.4014 8.29796L15.3213 7.32465C16.2075 7.02924 16.6507 6.88153 16.8846 7.11544C17.1185 7.34935 16.9708 7.79247 16.6753 8.67871L15.702
-                            11.5986C15.1986 13.1088 14.9469 13.8639 14.4054 14.4054C13.8639 14.9469 13.1088 15.1986 11.5986 15.702L8.67871 16.6753C7.79247 16.9708 7.34935
-                            17.1185 7.11544 16.8846C6.88153 16.6507 7.02924 16.2075 7.32465 15.3213L8.29796 12.4014C8.80136 10.8912 9.05306 10.1361 9.59457 9.59457C10.1361 
-                            9.05306 10.8912 8.80136 12.4014 8.29796Z" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M12.0001 12L11.9937 12.0064" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </span>
-          </motion.button>
+          <Link href="/pricing">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-3 mt-4 px-8 py-3 rounded-full transition-all w-fit text-sm md:text-base font-semibold"
+              style={{ background: 'linear-gradient(135deg, #5e5e5e, #074a0a)', padding: '2px', borderRadius: '9999px', }}
+            >
+              <span className="flex items-center gap-3 px-6 py-2 rounded-full bg-gradient-to-t from-[#92eb95] via-[#9dffa1] to-[#c3ffc6] text-[#2d4c2e] font-semibold">
+                {buttonText}
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
+            </motion.button>
+          </Link>
 
         </div>
 
@@ -203,8 +200,8 @@ const Card: React.FC<CardProps> = ({ index, title, description, color, buttonTex
 
           </motion.div>
         </div>
-      </motion.div>
-    </div>
+      </motion.div >
+    </div >
   );
 };
 

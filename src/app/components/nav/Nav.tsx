@@ -16,14 +16,16 @@ const NavBar = () => {
     };
 
     return (
-        <nav className='bg-gray-950 text-white'>
+        <nav className='sticky top-0 z-50 bg-gray-950/95 backdrop-blur-md text-white border-b border-gray-800/50'>
             <div className="absolute top-1 left-10 w-36 h-36 bg-[#161e16] rounded-full blur-3xl" />
 
             <div className='flex justify-between items-center px-6 md:px-20 py-6'>
-                {/* Logo */}
+                {/* Logo - AIHR Text */}
                 <div className="pointer-events-auto z-50">
-                    <Link href="/" className="cursor-pointer hover:opacity-90 transition ">
-                        <Image src="/images/logo.png" alt="Logo" width={56} height={40} priority />
+                    <Link href="/aihr" className="cursor-pointer hover:opacity-90 transition">
+                        <span className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#9dffa1] to-[#63a567] bg-clip-text text-transparent">
+                            AIHR
+                        </span>
                     </Link>
                 </div>
 
@@ -31,9 +33,15 @@ const NavBar = () => {
 
                 {/* Desktop Menu */}
                 <div className='hidden md:flex flex-1 justify-center'>
-                    <ul className='flex gap-10 text-sm font-medium'>
+                    <ul className='flex gap-8 text-sm font-medium'>
                         <li className='hover:text-green-400 cursor-pointer transition'>
                             <Link href="/aihr" className='cursor-pointer'>AIHR</Link>
+                        </li>
+                        <li className='hover:text-green-400 cursor-pointer transition'>
+                            <Link href="/aihr#services" className='cursor-pointer'>Services</Link>
+                        </li>
+                        <li className='hover:text-green-400 cursor-pointer transition'>
+                            <Link href="/aihr#features" className='cursor-pointer'>Features</Link>
                         </li>
                         <li className='hover:text-green-400 cursor-pointer transition'>
                             <Link href="/pricing" className='cursor-pointer'>Pricing</Link>
@@ -41,10 +49,6 @@ const NavBar = () => {
                         <li className='hover:text-green-400 transition'>
                             <Link href="/about" className='cursor-pointer'>About Us</Link>
                         </li>
-                        <li className='hover:text-green-400 transition'>
-                            <Link href="/services" className='cursor-pointer'>Service</Link>
-                        </li>
-
                         <li className='hover:text-green-400 cursor-pointer transition'>
                             <Link href="/industries" className='cursor-pointer'>Industries</Link>
                         </li>
@@ -61,6 +65,20 @@ const NavBar = () => {
                             <Link href="/" className='cursor-pointer'>Home</Link>
                         </li>
                     </ul>
+                </div>
+
+                {/* Login/Signup Buttons - Desktop */}
+                <div className='hidden md:flex items-center gap-3'>
+                    <Link href="/login">
+                        <button className='px-5 py-2 text-sm font-medium text-white border border-gray-600 rounded-full hover:border-green-400 transition-all duration-300'>
+                            Login
+                        </button>
+                    </Link>
+                    <Link href="/signup">
+                        <button className='px-5 py-2 text-sm font-medium text-gray-950 bg-gradient-to-r from-[#9dffa1] to-[#63a567] rounded-full hover:shadow-lg hover:shadow-green-400/50 transition-all duration-300'>
+                            Sign Up
+                        </button>
+                    </Link>
                 </div>
 
                 {/* <button
@@ -90,11 +108,17 @@ const NavBar = () => {
             </div>
 
             {/* Mobile Menu */}
-            <div className={`md:hidden overflow-hidden transition-all duration-300 ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+            <div className={`md:hidden overflow-hidden transition-all duration-300 ${isMenuOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
                 <div className='px-6 pb-6 pt-2 bg-gray-950'>
                     <ul className='flex flex-col gap-4 text-sm font-medium'>
                         <li className='hover:text-green-400 cursor-pointer transition py-2 border-b border-gray-800'>
                             <Link href="/aihr" className='cursor-pointer' onClick={closeMenu}>AIHR</Link>
+                        </li>
+                        <li className='hover:text-green-400 cursor-pointer transition py-2 border-b border-gray-800'>
+                            <Link href="/aihr#services" className='cursor-pointer' onClick={closeMenu}>Services</Link>
+                        </li>
+                        <li className='hover:text-green-400 cursor-pointer transition py-2 border-b border-gray-800'>
+                            <Link href="/aihr#features" className='cursor-pointer' onClick={closeMenu}>Features</Link>
                         </li>
                         <li className='hover:text-green-400 cursor-pointer transition py-2 border-b border-gray-800'>
                             <Link href="/pricing" className='cursor-pointer' onClick={closeMenu}>Pricing</Link>
@@ -118,9 +142,20 @@ const NavBar = () => {
                             <Link href="/" className='cursor-pointer' onClick={closeMenu}>Home</Link>
                         </li>
                     </ul>
-                    <button className='bg-[#90EE90] hover:bg-[#7FD87F] text-black px-4 py-2 rounded-full font-medium transition duration-300 w-full mt-4'>
-                        Schedule A Demo
-                    </button>
+
+                    {/* Login/Signup Buttons - Mobile */}
+                    <div className='flex flex-col gap-3 mt-6'>
+                        <Link href="/login" onClick={closeMenu}>
+                            <button className='w-full px-5 py-2.5 text-sm font-medium text-white border border-gray-600 rounded-full hover:border-green-400 transition-all duration-300'>
+                                Login
+                            </button>
+                        </Link>
+                        <Link href="/signup" onClick={closeMenu}>
+                            <button className='w-full px-5 py-2.5 text-sm font-medium text-gray-950 bg-gradient-to-r from-[#9dffa1] to-[#63a567] rounded-full hover:shadow-lg hover:shadow-green-400/50 transition-all duration-300'>
+                                Sign Up
+                            </button>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </nav>
