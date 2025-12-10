@@ -152,7 +152,7 @@ const Card: React.FC<CardProps> = ({ index, title, description, color, buttonTex
           backgroundColor: color, scale, top: `calc(-5vh + ${index * 25}px)`, transformOrigin: 'top',
         }}
         transition={{ duration: 0.5, ease: 'easeOut', }}
-        className="relative flex items-center w-[95vw] md:w-[1400px] h-[500px] rounded-4xl p-12 shadow-2xl text-white overflow-hidden border-2 border-[#444c45]">
+        className="relative flex flex-col md:flex-row items-center w-[95vw] md:w-[1400px] h-auto md:h-[500px] rounded-4xl p-8 md:p-12 shadow-2xl text-white overflow-hidden border-2 border-[#444c45]">
 
         <div className="absolute -top-10 -left-20 w-80 h-80 bg-[#202f22] rounded-full blur-3xl" />
         <div className="absolute -top-10 -right-50 w-160 h-160 bg-[#2f4930] rounded-full blur-3xl" />
@@ -164,22 +164,21 @@ const Card: React.FC<CardProps> = ({ index, title, description, color, buttonTex
         </div>
 
         {/* Left Content */}
-        <div className="w-1/2 relative z-10 flex flex-col gap-6">
-          <div className="flex items-start gap-6">
-            <div className="w-28 h-28 rounded-full  flex items-center justify-center  backdrop-blur-sm shrink-0 border-2 border-[#b8c9ba]">
-              <span className="text-4xl">{icon}</span>
+        <div className="w-full md:w-1/2 relative z-10 flex flex-col gap-4 md:gap-6 mb-8 md:mb-0">
+          <div className="flex items-start gap-4 md:gap-6">
+            <div className="w-20 h-20 md:w-28 md:h-28 rounded-full flex items-center justify-center backdrop-blur-sm shrink-0 border-2 border-[#b8c9ba]">
+              <span className="text-3xl md:text-4xl">{icon}</span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold leading-tight pt-2">{title}</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold leading-tight pt-2">{title}</h2>
           </div>
-          <p className="text-sm md:text-base leading-relaxed text-white/90 pr-4">{description}</p>
+          <p className="text-sm md:text-base leading-relaxed text-white/90 pr-0 md:pr-4">{description}</p>
 
           <Link href="/pricing">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-3 mt-4 px-8 py-3 rounded-full transition-all w-fit text-sm md:text-base font-semibold"
-              style={{ background: 'linear-gradient(135deg, #5e5e5e, #074a0a)', padding: '2px', borderRadius: '9999px', }}
-            >
+              style={{ background: 'linear-gradient(135deg, #5e5e5e, #074a0a)', padding: '2px', borderRadius: '9999px', }}>
               <span className="flex items-center gap-3 px-6 py-2 rounded-full bg-gradient-to-t from-[#92eb95] via-[#9dffa1] to-[#c3ffc6] text-[#2d4c2e] font-semibold">
                 {buttonText}
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -192,8 +191,8 @@ const Card: React.FC<CardProps> = ({ index, title, description, color, buttonTex
         </div>
 
         {/* Right Decorative Icons */}
-        <div className="w-1/2 relative z-0 flex items-center justify-center">
-          <motion.div className="relative w-full h-full flex items-center justify-center" style={{ scale: imageScale }} >
+        <div className="w-full md:w-1/2 relative z-0 flex items-center justify-center md:justify-end">
+          <motion.div className="relative w-full h-64 md:h-full flex items-center justify-center" style={{ scale: imageScale }} >
 
             <StackingSetting />
             <StackingBackdropIcon />
