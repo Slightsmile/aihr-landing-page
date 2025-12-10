@@ -85,7 +85,7 @@ const AIHRHero = () => {
   });
 
   return (
-    <section className="min-h-screen flex flex-col md:flex-row relative bg-gray-950">
+    <section className="flex flex-col md:flex-row relative bg-gray-950">
       {/* Background blur elements */}
       <div className="animate-pulse fixed bottom-0 right-0 w-96 h-96 bg-[#141e14] rounded-full blur-3xl pointer-events-none z-0" />
       <div className="animate-pulse fixed bottom-0 left-0 w-96 h-96 bg-[#161e16] rounded-full blur-3xl pointer-events-none z-0" />
@@ -94,7 +94,7 @@ const AIHRHero = () => {
       <div className="animate-pulse fixed top-10 left-0 w-96 h-96 bg-green-500/5 rounded-full blur-3xl pointer-events-none z-0" />
 
       {/* Left Side - Hero Content */}
-      <div className="w-full md:w-1/2 flex items-center px-6 md:px-12 lg:px-20 py-20 md:py-0 md:min-h-screen relative z-10">
+      <div className="w-full md:w-1/2 flex items-center justify-center px-6 md:px-12 lg:px-20 py-12 md:py-0 h-screen sticky top-0 relative z-10">
         <div className="max-w-2xl">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-[#ffffff] mb-6 md:mb-4 leading-tight">
             Transforming <span className="text-[#9dffa1]">Human Resources</span>{' '}<br /> with AI Intelligence
@@ -120,11 +120,7 @@ const AIHRHero = () => {
       {/* Right Side - Independent Scrollable Stacking Cards Container */}
       <div
         ref={container}
-        className="w-full md:w-1/2 md:h-screen md:overflow-y-auto relative z-10 scrollbar-hide"
-        style={{
-          scrollbarWidth: 'none', /* Firefox */
-          msOverflowStyle: 'none', /* IE and Edge */
-        }}
+        className="w-full md:w-1/2 relative z-10"
       >
         {featureCards.map((card, i) => {
           const targetScale = 1 - (featureCards.length - i) * 0.05;
@@ -181,7 +177,7 @@ const StackingCard: React.FC<StackingCardProps> = ({ index, title, description, 
           transformOrigin: 'top',
         }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
-        className="relative w-full max-w-[600px] h-[320px] md:h-[350px] rounded-3xl p-6 md:p-8 shadow-2xl text-white overflow-hidden border-2 border-[#444c45] bg-gradient-to-br from-[#0a1f0a] to-[#030712]"
+        className="relative w-full max-w-[650px] h-[350px] md:h-[400px] rounded-4xl p-8 md:p-12 shadow-2xl text-white overflow-hidden border-2 border-[#444c45] bg-gradient-to-br from-[#0a1f0a] to-[#030712]"
       >
         {/* Background decorative elements */}
         <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#2f4930] rounded-full blur-3xl opacity-50" />
@@ -198,23 +194,23 @@ const StackingCard: React.FC<StackingCardProps> = ({ index, title, description, 
           style={{ scale: imageScale }}
         >
           <div>
-            <div className="flex items-start gap-4 mb-3">
-              <div className="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center backdrop-blur-sm shrink-0 border-2 border-[#b8c9ba]">
-                <span className="text-2xl md:text-3xl">{icon}</span>
+            <div className="flex items-start gap-4 mb-4">
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center backdrop-blur-sm shrink-0 border-2 border-[#b8c9ba]">
+                <span className="text-3xl md:text-4xl">{icon}</span>
               </div>
-              <h2 className="text-lg md:text-xl lg:text-2xl font-bold leading-tight pt-1">{title}</h2>
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight pt-1 md:pt-2">{title}</h2>
             </div>
-            <p className="text-xs md:text-sm leading-relaxed text-white/90 mb-4">{description}</p>
+            <p className="text-sm md:text-base leading-relaxed text-white/90 mb-4">{description}</p>
           </div>
 
           <Link href="/pricing">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full transition-all w-fit text-xs md:text-sm font-semibold"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full transition-all w-fit text-sm md:text-base font-semibold"
               style={{ background: 'linear-gradient(135deg, #5e5e5e, #074a0a)', padding: '2px', borderRadius: '9999px' }}
             >
-              <span className="flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-t from-[#92eb95] via-[#9dffa1] to-[#c3ffc6] text-[#2d4c2e] font-semibold">
+              <span className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-t from-[#92eb95] via-[#9dffa1] to-[#c3ffc6] text-[#2d4c2e] font-semibold">
                 {buttonText}
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
