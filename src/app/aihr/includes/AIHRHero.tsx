@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from 'next/navigation';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import Link from 'next/link';
 
@@ -79,13 +79,31 @@ const AIHRHero = () => {
   };
 
   const container = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkIsDesktop = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+    checkIsDesktop();
+    window.addEventListener('resize', checkIsDesktop);
+    return () => window.removeEventListener('resize', checkIsDesktop);
+  }, []);
+
+  // Scroll for Desktop (Independent Container)
+  const { scrollYProgress: containerScrollProgress } = useScroll({
+    container: container,
+    offset: ['start start', 'end end'],
+  });
+
+  // Scroll for Mobile (Window Scroll)
+  const { scrollYProgress: windowScrollProgress } = useScroll({
     target: container,
     offset: ['start start', 'end end'],
   });
 
   return (
-    <section className="flex flex-col md:flex-row relative bg-gray-950">
+    <section className="flex flex-col md:flex-row relative bg-gray-950 md:h-screen md:overflow-hidden">
       {/* Background blur elements */}
       <div className="animate-pulse fixed bottom-0 right-0 w-96 h-96 bg-[#141e14] rounded-full blur-3xl pointer-events-none z-0" />
       <div className="animate-pulse fixed bottom-0 left-0 w-96 h-96 bg-[#161e16] rounded-full blur-3xl pointer-events-none z-0" />
@@ -94,7 +112,7 @@ const AIHRHero = () => {
       <div className="animate-pulse fixed top-10 left-0 w-96 h-96 bg-green-500/5 rounded-full blur-3xl pointer-events-none z-0" />
 
       {/* Left Side - Hero Content */}
-      <div className="w-full md:w-1/2 flex items-center justify-center px-6 md:px-12 lg:px-20 py-12 md:py-0 h-screen sticky top-0 relative z-10">
+      <div className="w-full md:w-1/2 flex items-center justify-center px-6 md:px-12 lg:px-20 py-12 md:py-0 min-h-screen md:h-full relative z-10">
         <div className="max-w-2xl">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-[#ffffff] mb-6 md:mb-4 leading-tight">
             Transforming <span className="text-[#9dffa1]">Human Resources</span>{' '}<br /> with AI Intelligence
@@ -120,26 +138,30 @@ const AIHRHero = () => {
       {/* Right Side - Independent Scrollable Stacking Cards Container */}
       <div
         ref={container}
-        className="w-full md:w-1/2 relative z-10"
+        className="w-full md:w-1/2 relative z-10 md:overflow-y-auto md:h-full no-scrollbar"
       >
-        {featureCards.map((card, i) => {
-          const targetScale = 1 - (featureCards.length - i) * 0.05;
-          const range = [i / featureCards.length, 1];
+        <div className="relative">
+          {featureCards.map((card, i) => {
+            const targetScale = 1 - (featureCards.length - i) * 0.05;
+            const range = [i / featureCards.length, 1];
 
-          return (
-            <StackingCard
-              key={card.id}
-              index={i}
-              title={card.title}
-              description={card.description}
-              icon={card.icon}
-              buttonText={card.buttonText}
-              progress={scrollYProgress}
-              range={range}
-              targetScale={targetScale}
-            />
-          );
-        })}
+            return (
+              <StackingCard
+                key={card.id}
+                index={i}
+                title={card.title}
+                description={card.description}
+                icon={card.icon}
+                buttonText={card.buttonText}
+                progress={isDesktop ? containerScrollProgress : windowScrollProgress}
+                range={range}
+                targetScale={targetScale}
+                containerRef={container}
+                isDesktop={isDesktop}
+              />
+            );
+          })}
+        </div>
       </div>
     </section>
   );
@@ -155,13 +177,16 @@ interface StackingCardProps {
   progress: any;
   range: number[];
   targetScale: number;
+  containerRef: React.RefObject<HTMLDivElement | null>;
+  isDesktop: boolean;
 }
 
-const StackingCard: React.FC<StackingCardProps> = ({ index, title, description, icon, buttonText, progress, range, targetScale }) => {
-  const container = useRef<HTMLDivElement>(null);
+const StackingCard: React.FC<StackingCardProps> = ({ index, title, description, icon, buttonText, progress, range, targetScale, containerRef, isDesktop }) => {
+  const cardRef = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
-    target: container,
+    target: cardRef,
+    container: isDesktop ? containerRef : undefined,
     offset: ['start end', 'start start'],
   });
 
@@ -169,10 +194,10 @@ const StackingCard: React.FC<StackingCardProps> = ({ index, title, description, 
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
-    <div ref={container} className="h-screen flex items-center justify-center sticky top-0 px-6 md:px-12">
+    <div ref={cardRef} className="h-auto md:h-screen flex items-center justify-center relative md:sticky top-0 px-4 md:px-12 py-10 md:py-0">
       <motion.div
         style={{
-          scale,
+          scale: isDesktop ? scale : 1,
           top: `calc(-5vh + ${index * 25}px)`,
           transformOrigin: 'top',
         }}

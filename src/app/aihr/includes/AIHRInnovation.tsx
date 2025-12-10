@@ -80,7 +80,7 @@ export default function AIHRInnovation() {
                                 <h3 className='text-2xl md:text-3xl font-bold text-[#d2d2d2]'>Ethical AI</h3>
                                 <p className='text-[#d2d2d2] text-sm md:text-base leading-relaxed'>Fairness, transparency, and compliance integrated into every solution. Our AI reduces bias and promotes inclusive decision-making.</p>
                             </div>
-                            <div className='md:w-full w-38 h-22 left-24 md:left-0 md:h-48 lg:h-56 flex items-center justify-center mt-auto pb-8 md:pb-12  lg:pb-24 relative z-10'>
+                            <div className='md:w-full w-38 h-22 left-0 md:left-0 md:h-48 lg:h-56 flex items-center justify-center mt-auto pb-8 md:pb-12  lg:pb-24 relative z-10'>
                                 <div className='w-38 h-38 md:w-full md:h-full lg:w-full lg:h-full flex items-center justify-center'>
                                     <AccessTopTalent />
                                 </div>
@@ -96,7 +96,7 @@ export default function AIHRInnovation() {
                                 <p className='text-[#d2d2d2] text-sm md:text-base leading-relaxed'>Solutions that grow with your organization, from small teams to large enterprises, with seamless integration and expansion.</p>
                             </div>
 
-                            <div className='w-28 left-22 md:left-0 md:w-full h-32 md:h-48 lg:h-56 flex items-center justify-center mt-auto pb-4 md:pb-6 relative z-10'>
+                            <div className='w-28 left-0 md:left-0 md:w-full h-32 md:h-48 lg:h-56 flex items-center justify-center mt-auto pb-4 md:pb-6 relative z-10'>
                                 <div className='w-10 h-28 mb-4 md:mb-8 md:w-full md:h-full lg:w-full lg:h-full flex items-center justify-center'>
                                     <TechnologyIntegration />
                                 </div>

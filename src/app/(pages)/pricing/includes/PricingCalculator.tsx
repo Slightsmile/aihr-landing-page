@@ -65,7 +65,7 @@ const PricingCalculator = () => {
                         {/* Tier Selection */}
                         <div className="mb-8">
                             <label className="block text-white font-semibold mb-4">Select Tier</label>
-                            <div className="grid grid-cols-3 gap-3">
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                                 {tiers.map((tier) => (
                                     <button
                                         key={tier.id}
@@ -122,24 +122,20 @@ const PricingCalculator = () => {
                                 <span className="text-white font-semibold">${basePrice}/month</span>
                             </div>
 
-                            {discount > 0 && (
-                                <div className="flex justify-between items-center pb-3 border-b border-gray-800">
-                                    <span className="text-gray-400">Package Discount ({currentPackage?.label})</span>
-                                    <span className="text-green-500 font-semibold">-${discountAmount.toFixed(2)}/month</span>
-                                </div>
-                            )}
+                            <div className={`flex justify-between items-center pb-3 border-b border-gray-800 ${discount > 0 ? '' : 'opacity-70'}`}>
+                                <span className="text-gray-400">Package Discount ({currentPackage?.label})</span>
+                                <span className={`font-semibold ${discount > 0 ? 'text-green-500' : 'text-gray-500'}`}>-${discountAmount.toFixed(2)}/month</span>
+                            </div>
 
                             <div className="flex justify-between items-center pb-3 border-b border-gray-800">
                                 <span className="text-gray-400">Monthly Price</span>
                                 <span className="text-white font-semibold">${finalPrice.toFixed(2)}/month</span>
                             </div>
 
-                            {packageMultiplier > 1 && (
-                                <div className="flex justify-between items-center pb-3 border-b border-gray-800">
-                                    <span className="text-gray-400">Duration</span>
-                                    <span className="text-white font-semibold">{packageMultiplier} months</span>
-                                </div>
-                            )}
+                            <div className="flex justify-between items-center pb-3 border-b border-gray-800">
+                                <span className="text-gray-400">Duration</span>
+                                <span className={`font-semibold ${packageMultiplier > 1 ? 'text-white' : 'text-gray-300'}`}>{packageMultiplier} {packageMultiplier > 1 ? 'months' : 'month'}</span>
+                            </div>
                         </div>
 
                         <div className="bg-gray-800 rounded-2xl p-6 mb-6">
