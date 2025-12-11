@@ -7,7 +7,7 @@ import { CostOptimization, BrainConnection, GroupPeople, AccessTopTalent, Techno
 
 export default function AIHRInnovation() {
     return (
-        <section id="services" className="py-20 px-4 md:px-8 lg:px-16 bg-gray-950 relative overflow-hidden">
+        <section id="services" className="py-20 px-4 md:px-8 lg:px-16 bg-gray-950 relative overflow-hidden scroll-mt-24">
             <div className="animate-pulse absolute top-70 right-0 w-96 h-96 bg-[#101710] rounded-full blur-3xl"></div>
             <div className="animate-pulse absolute top-230 right-0 w-96 h-96 bg-[#101710] rounded-full blur-3xl"></div>
 

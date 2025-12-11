@@ -1,10 +1,10 @@
-'use client'; 
-import HomePage from "./home/homePage";
+'use client';
+import AIHRPage from "./home/page";
 
 export default function Home() {
   return (
-  <>
-      <HomePage/>
-  </>
+    <>
+      <AIHRPage />
+    </>
   );
 }

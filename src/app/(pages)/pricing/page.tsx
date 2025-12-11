@@ -3,7 +3,6 @@ import PricingHero from './includes/PricingHero';
 import PricingCards from './includes/PricingCards';
 import PricingCalculator from './includes/PricingCalculator';
 import FeatureComparison from './includes/FeatureComparison';
-import Guarantees from './includes/Guarantees';
 
 export default function PricingPage() {
     return (
@@ -12,7 +11,6 @@ export default function PricingPage() {
             <PricingCards />
             <FeatureComparison />
             <PricingCalculator />
-            <Guarantees />
         </div>
     );
 }

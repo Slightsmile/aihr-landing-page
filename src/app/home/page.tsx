@@ -2,7 +2,7 @@
 import AIHRHero from './includes/AIHRHero';
 import AIHRFeatures from './includes/AIHRFeatures';
 import AIHRInnovation from './includes/AIHRInnovation';
-import Partner from '../home/includes/Partner';
+import Partner from '../duplicatehome/includes/Partner';
 
 export default function AIHRPage() {
   return (

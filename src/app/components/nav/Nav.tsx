@@ -22,7 +22,7 @@ const NavBar = () => {
             <div className='flex justify-between items-center px-6 md:px-20 py-6'>
                 {/* Logo - AIHR Text */}
                 <div className="pointer-events-auto z-50">
-                    <Link href="/aihr" className="cursor-pointer hover:opacity-90 transition">
+                    <Link href="/home" className="cursor-pointer hover:opacity-90 transition">
                         <span className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#9dffa1] to-[#63a567] bg-clip-text text-transparent">
                             AIHR
                         </span>
@@ -35,13 +35,13 @@ const NavBar = () => {
                 <div className='hidden md:flex flex-1 justify-center'>
                     <ul className='flex gap-8 text-sm font-medium'>
                         <li className='hover:text-green-400 cursor-pointer transition'>
-                            <Link href="/aihr" className='cursor-pointer'>AIHR</Link>
+                            <Link href="/home" className='cursor-pointer'>Home</Link>
                         </li>
                         <li className='hover:text-green-400 cursor-pointer transition'>
-                            <Link href="/aihr#services" className='cursor-pointer'>Services</Link>
+                            <Link href="/home#services" className='cursor-pointer'>Services</Link>
                         </li>
                         <li className='hover:text-green-400 cursor-pointer transition'>
-                            <Link href="/aihr#features" className='cursor-pointer'>Features</Link>
+                            <Link href="/home#features" className='cursor-pointer'>Features</Link>
                         </li>
                         <li className='hover:text-green-400 cursor-pointer transition'>
                             <Link href="/pricing" className='cursor-pointer'>Pricing</Link>
@@ -112,13 +112,13 @@ const NavBar = () => {
                 <div className='px-6 pb-6 pt-2 bg-gray-950'>
                     <ul className='flex flex-col gap-4 text-sm font-medium'>
                         <li className='hover:text-green-400 cursor-pointer transition py-2 border-b border-gray-800'>
-                            <Link href="/aihr" className='cursor-pointer' onClick={closeMenu}>AIHR</Link>
+                            <Link href="/home" className='cursor-pointer' onClick={closeMenu}>Home</Link>
                         </li>
                         <li className='hover:text-green-400 cursor-pointer transition py-2 border-b border-gray-800'>
-                            <Link href="/aihr#services" className='cursor-pointer' onClick={closeMenu}>Services</Link>
+                            <Link href="/home#services" className='cursor-pointer' onClick={closeMenu}>Services</Link>
                         </li>
                         <li className='hover:text-green-400 cursor-pointer transition py-2 border-b border-gray-800'>
-                            <Link href="/aihr#features" className='cursor-pointer' onClick={closeMenu}>Features</Link>
+                            <Link href="/home#features" className='cursor-pointer' onClick={closeMenu}>Features</Link>
                         </li>
                         <li className='hover:text-green-400 cursor-pointer transition py-2 border-b border-gray-800'>
                             <Link href="/pricing" className='cursor-pointer' onClick={closeMenu}>Pricing</Link>
