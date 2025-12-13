@@ -46,24 +46,6 @@ const NavBar = () => {
                         <li className='hover:text-green-400 cursor-pointer transition'>
                             <Link href="/pricing" className='cursor-pointer'>Pricing</Link>
                         </li>
-                        <li className='hover:text-green-400 transition'>
-                            <Link href="/about" className='cursor-pointer'>About Us</Link>
-                        </li>
-                        <li className='hover:text-green-400 cursor-pointer transition'>
-                            <Link href="/industries" className='cursor-pointer'>Industries</Link>
-                        </li>
-                        <li className='hover:text-green-400 cursor-pointer transition'>
-                            <Link href="/insights" className='cursor-pointer'>Insights</Link>
-                        </li>
-                        <li className='hover:text-green-400 cursor-pointer transition'>
-                            <Link href="/career" className='cursor-pointer'>Careers</Link>
-                        </li>
-                        <li className='hover:text-green-400 cursor-pointer transition'>
-                            <Link href="/contact" className='cursor-pointer'>Contact Us</Link>
-                        </li>
-                        <li className='hover:text-green-400 cursor-pointer transition'>
-                            <Link href="/" className='cursor-pointer'>Home</Link>
-                        </li>
                     </ul>
                 </div>
 
@@ -122,24 +104,6 @@ const NavBar = () => {
                         </li>
                         <li className='hover:text-green-400 cursor-pointer transition py-2 border-b border-gray-800'>
                             <Link href="/pricing" className='cursor-pointer' onClick={closeMenu}>Pricing</Link>
-                        </li>
-                        <li className='hover:text-green-400 transition py-2 border-b border-gray-800'>
-                            <Link href="/about" className='cursor-pointer' onClick={closeMenu}>About Us</Link>
-                        </li>
-                        <li className='hover:text-green-400 cursor-pointer transition py-2 border-b border-gray-800'>
-                            <Link href="/industries" className='cursor-pointer' onClick={closeMenu}>Industries</Link>
-                        </li>
-                        <li className='hover:text-green-400 cursor-pointer transition py-2 border-b border-gray-800'>
-                            <Link href="/insights" className='cursor-pointer' onClick={closeMenu}>Insights</Link>
-                        </li>
-                        <li className='hover:text-green-400 cursor-pointer transition py-2 border-b border-gray-800'>
-                            <Link href="/career" className='cursor-pointer' onClick={closeMenu}>Careers</Link>
-                        </li>
-                        <li className='hover:text-green-400 cursor-pointer transition py-2 border-b border-gray-800'>
-                            <Link href="/contact" className='cursor-pointer' onClick={closeMenu}>Contact Us</Link>
-                        </li>
-                        <li className='hover:text-green-400 cursor-pointer transition py-2 border-b border-gray-800'>
-                            <Link href="/" className='cursor-pointer' onClick={closeMenu}>Home</Link>
                         </li>
                     </ul>
 

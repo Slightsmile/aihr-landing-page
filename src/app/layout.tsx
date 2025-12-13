@@ -10,7 +10,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body suppressHydrationWarning>
         <ReduxProvider>
           <NavBar />
-            <main>{children}</main> 
+          <main>{children}</main>
           <Footer />
         </ReduxProvider>
       </body>

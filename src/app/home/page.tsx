@@ -2,7 +2,7 @@
 import AIHRHero from './includes/AIHRHero';
 import AIHRFeatures from './includes/AIHRFeatures';
 import AIHRInnovation from './includes/AIHRInnovation';
-import Partner from '../duplicatehome/includes/Partner';
+import AIHRPartner from './includes/AIHRPartner';
 
 export default function AIHRPage() {
   return (
@@ -10,7 +10,7 @@ export default function AIHRPage() {
       <AIHRHero />
       <AIHRInnovation />
       <AIHRFeatures />
-      <Partner />
+      <AIHRPartner />
     </div>
   );
 }
