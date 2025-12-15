@@ -61,7 +61,7 @@ export default function AIHRPartner() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
                         {opportunities.map((opp, index) => (
-                            <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:border-[var(--accent-gold)] transition-all duration-300 flex flex-col group">
+                            <div key={index} className="bg-white rounded-2xl p-8 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] border border-gray-100 hover:border-[var(--accent-gold)] transition-all duration-300 flex flex-col group">
                                 <h4 className="text-2xl font-bold text-[var(--primary-navy)] mb-6 text-center">{opp.title}</h4>
                                 <ul className="space-y-4 mb-8 flex-grow">
                                     {opp.items.map((item, idx) => (

@@ -92,7 +92,7 @@ const PricingCalculator = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="bg-[var(--card-bg)] rounded-3xl p-8 border border-gray-100 shadow-xl h-full"
+                        className="bg-[var(--card-bg)] rounded-3xl p-8 border border-gray-100 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] h-full"
                     >
                         {/* Tier Selection */}
                         <div className="mb-8">
@@ -168,7 +168,7 @@ const PricingCalculator = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="bg-[var(--card-bg)] rounded-3xl p-8 border border-gray-100 shadow-xl h-full flex flex-col justify-between"
+                        className="bg-[var(--card-bg)] rounded-3xl p-8 border border-gray-100 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] h-full flex flex-col justify-between"
                     >
                         <div>
                             <h3 className="text-2xl font-bold text-[var(--primary-navy)] mb-6">Price Breakdown</h3>

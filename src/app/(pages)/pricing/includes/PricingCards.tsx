@@ -68,7 +68,7 @@ const PricingCards = () => {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className={`relative bg-[var(--card-bg)] rounded-3xl p-8 border ${tier.popular ? 'border-[var(--accent-gold)] shadow-lg' : 'border-gray-100 shadow-md'
+                            className={`relative bg-[var(--card-bg)] rounded-3xl p-8 border ${tier.popular ? 'border-[var(--accent-gold)] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)]' : 'border-gray-100 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)]'
                                 } hover:border-[var(--accent-gold)] transition-all duration-300 hover:scale-105 flex flex-col`}
                         >
                             {tier.popular && (

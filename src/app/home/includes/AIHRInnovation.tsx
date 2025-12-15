@@ -27,7 +27,7 @@ export default function AIHRInnovation() {
                 <div className='w-full max-w-7xl mx-auto px-4 md:px-8 '>
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 px-1 md:px-10'>
                         {/*  Card 1 & 2 */}
-                        <div className='w-full h-auto lg:h-110 border border-gray-100 rounded-3xl overflow-hidden bg-[var(--card-bg)] shadow-lg flex flex-col relative group hover:border-[var(--accent-gold)] transition-all duration-300'>
+                        <div className='w-full h-auto lg:h-110 border border-gray-100 rounded-3xl overflow-hidden bg-[var(--card-bg)] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] flex flex-col relative group hover:border-[var(--accent-gold)] transition-all duration-300'>
 
                             <div className='absolute inset-0 bg-gradient-to-tl from-blue-50/50 via-white to-transparent pointer-events-none'></div>
 
@@ -45,7 +45,7 @@ export default function AIHRInnovation() {
                         </div>
 
                         {/*  Card 2 */}
-                        <div className='w-full h-auto lg:h-110 border border-gray-100 rounded-3xl overflow-hidden bg-[var(--card-bg)] shadow-lg flex flex-col relative group hover:border-[var(--accent-gold)] transition-all duration-300'>
+                        <div className='w-full h-auto lg:h-110 border border-gray-100 rounded-3xl overflow-hidden bg-[var(--card-bg)] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] flex flex-col relative group hover:border-[var(--accent-gold)] transition-all duration-300'>
                             <div className='absolute inset-0 bg-gradient-to-tr from-amber-50/50 via-white to-transparent pointer-events-none'></div>
 
                             <div className='flex flex-col gap-4 mb-6 p-6 md:p-8 relative z-10'>
@@ -71,7 +71,7 @@ export default function AIHRInnovation() {
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 px-1 md:px-10 mt-6 md:mt-0'>
                         {/* Card 3 */}
                         <div className='w-full h-auto lg:h-110 border border-gray-100 rounded-3xl overflow-hidden
-                bg-[var(--card-bg)] shadow-lg group hover:border-[var(--accent-gold)] transition-all duration-300
+                bg-[var(--card-bg)] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] group hover:border-[var(--accent-gold)] transition-all duration-300
                 flex flex-col relative '>
                             <div className='absolute inset-0 bg-gradient-to-bl from-blue-50/50 via-white to-transparent pointer-events-none'></div>
 
@@ -87,7 +87,7 @@ export default function AIHRInnovation() {
                         </div>
 
                         {/* Card 4 -  */}
-                        <div className='w-full h-auto lg:h-110 border border-gray-100 rounded-3xl overflow-hidden bg-[var(--card-bg)] shadow-lg flex flex-col relative group hover:border-[var(--accent-gold)] transition-all duration-300'>
+                        <div className='w-full h-auto lg:h-110 border border-gray-100 rounded-3xl overflow-hidden bg-[var(--card-bg)] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] flex flex-col relative group hover:border-[var(--accent-gold)] transition-all duration-300'>
                             <div className='absolute inset-0 bg-gradient-to-br from-amber-50/50 via-white to-transparent pointer-events-none'></div>
 
                             <div className='flex flex-col gap-4 mb-6 p-6 md:p-8 relative z-10'>

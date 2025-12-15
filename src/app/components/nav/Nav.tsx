@@ -19,7 +19,7 @@ const NavBar = () => {
         <nav className='sticky top-0 z-50 bg-white/80 backdrop-blur-md text-[var(--primary-navy)] border-b border-gray-100 shadow-sm'>
             <div className="absolute top-1 left-10 w-36 h-36 bg-blue-50 rounded-full blur-3xl opacity-50 mix-blend-multiply" />
 
-            <div className='flex justify-between items-center px-6 md:px-20 py-6'>
+            <div className='relative flex justify-between items-center px-6 md:px-20 py-6'>
                 {/* Logo - AIHR Text */}
                 <div className="pointer-events-auto z-50">
                     <Link href="/home" className="cursor-pointer hover:opacity-90 transition">
@@ -32,7 +32,7 @@ const NavBar = () => {
 
 
                 {/* Desktop Menu */}
-                <div className='hidden md:flex flex-1 justify-center'>
+                <div className='hidden md:flex absolute left-1/2 -translate-x-1/2'>
                     <ul className='flex gap-8 text-sm font-medium'>
                         <li className='hover:text-[var(--accent-blue)] cursor-pointer transition'>
                             <Link href="/home" className='cursor-pointer'>Home</Link>
