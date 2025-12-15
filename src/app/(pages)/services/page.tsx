@@ -3,7 +3,7 @@
 import React from 'react';
 import Hero from './includes/Hero';
 import MaximizeDigitalReach from './includes/MaximizeDigitalReach';
-import Services from '../../home/includes/Services';
+import Services from '../../home/includes/AIHRServices';
 import SmartSolution from './includes/SmartSolution';
 import GetInTouch from '../../components/common/GetInTouch';
 import Service from './includes/Service';
@@ -20,7 +20,7 @@ const page = () => {
                 <Service />
                 <GetInTouch />
             </div>
-        </> 
+        </>
     );
 };
 
