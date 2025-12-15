@@ -16,14 +16,14 @@ const NavBar = () => {
     };
 
     return (
-        <nav className='sticky top-0 z-50 bg-gray-950/95 backdrop-blur-md text-white border-b border-gray-800/50'>
-            <div className="absolute top-1 left-10 w-36 h-36 bg-[#161e16] rounded-full blur-3xl" />
+        <nav className='sticky top-0 z-50 bg-white/80 backdrop-blur-md text-[var(--primary-navy)] border-b border-gray-100 shadow-sm'>
+            <div className="absolute top-1 left-10 w-36 h-36 bg-blue-50 rounded-full blur-3xl opacity-50 mix-blend-multiply" />
 
             <div className='flex justify-between items-center px-6 md:px-20 py-6'>
                 {/* Logo - AIHR Text */}
                 <div className="pointer-events-auto z-50">
                     <Link href="/home" className="cursor-pointer hover:opacity-90 transition">
-                        <span className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#9dffa1] to-[#63a567] bg-clip-text text-transparent">
+                        <span className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[var(--accent-blue)] to-[var(--accent-gold)] bg-clip-text text-transparent">
                             AIHR
                         </span>
                     </Link>
@@ -34,16 +34,16 @@ const NavBar = () => {
                 {/* Desktop Menu */}
                 <div className='hidden md:flex flex-1 justify-center'>
                     <ul className='flex gap-8 text-sm font-medium'>
-                        <li className='hover:text-green-400 cursor-pointer transition'>
+                        <li className='hover:text-[var(--accent-blue)] cursor-pointer transition'>
                             <Link href="/home" className='cursor-pointer'>Home</Link>
                         </li>
-                        <li className='hover:text-green-400 cursor-pointer transition'>
+                        <li className='hover:text-[var(--accent-blue)] cursor-pointer transition'>
                             <Link href="/home#services" className='cursor-pointer'>Services</Link>
                         </li>
-                        <li className='hover:text-green-400 cursor-pointer transition'>
+                        <li className='hover:text-[var(--accent-blue)] cursor-pointer transition'>
                             <Link href="/home#features" className='cursor-pointer'>Features</Link>
                         </li>
-                        <li className='hover:text-green-400 cursor-pointer transition'>
+                        <li className='hover:text-[var(--accent-blue)] cursor-pointer transition'>
                             <Link href="/pricing" className='cursor-pointer'>Pricing</Link>
                         </li>
                     </ul>
@@ -52,12 +52,12 @@ const NavBar = () => {
                 {/* Login/Signup Buttons - Desktop */}
                 <div className='hidden md:flex items-center gap-3'>
                     <Link href="/login">
-                        <button className='px-5 py-2 text-sm font-medium text-white border border-gray-600 rounded-full hover:border-green-400 transition-all duration-300'>
+                        <button className='px-5 py-2 text-sm font-medium text-[var(--primary-navy)] border border-gray-200 rounded-full hover:border-[var(--accent-blue)] hover:text-[var(--accent-blue)] transition-all duration-300'>
                             Login
                         </button>
                     </Link>
                     <Link href="/signup">
-                        <button className='px-5 py-2 text-sm font-medium text-gray-950 bg-gradient-to-r from-[#9dffa1] to-[#63a567] rounded-full hover:shadow-lg hover:shadow-green-400/50 transition-all duration-300'>
+                        <button className='px-5 py-2 text-sm font-medium text-white bg-gradient-to-r from-[var(--accent-blue)] to-[var(--accent-gold)] rounded-full hover:shadow-lg hover:opacity-90 transition-all duration-300'>
                             Sign Up
                         </button>
                     </Link>
@@ -82,27 +82,27 @@ const NavBar = () => {
                         className='flex flex-col gap-1.5 w-8 h-8 justify-center items-center focus:outline-none'
                         aria-label='Toggle menu'
                     >
-                        <span className={`w-8 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-                        <span className={`w-8 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-                        <span className={`w-8 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+                        <span className={`w-8 h-0.5 bg-[var(--primary-navy)] transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+                        <span className={`w-8 h-0.5 bg-[var(--primary-navy)] transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+                        <span className={`w-8 h-0.5 bg-[var(--primary-navy)] transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
                     </button>
                 </div>
             </div>
 
             {/* Mobile Menu */}
             <div className={`md:hidden overflow-hidden transition-all duration-300 ${isMenuOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                <div className='px-6 pb-6 pt-2 bg-gray-950'>
-                    <ul className='flex flex-col gap-4 text-sm font-medium'>
-                        <li className='hover:text-green-400 cursor-pointer transition py-2 border-b border-gray-800'>
+                <div className='px-6 pb-6 pt-2 bg-white border-b border-gray-100'>
+                    <ul className='flex flex-col gap-4 text-sm font-medium text-[var(--primary-navy)]'>
+                        <li className='hover:text-[var(--accent-blue)] cursor-pointer transition py-2 border-b border-gray-100'>
                             <Link href="/home" className='cursor-pointer' onClick={closeMenu}>Home</Link>
                         </li>
-                        <li className='hover:text-green-400 cursor-pointer transition py-2 border-b border-gray-800'>
+                        <li className='hover:text-[var(--accent-blue)] cursor-pointer transition py-2 border-b border-gray-100'>
                             <Link href="/home#services" className='cursor-pointer' onClick={closeMenu}>Services</Link>
                         </li>
-                        <li className='hover:text-green-400 cursor-pointer transition py-2 border-b border-gray-800'>
+                        <li className='hover:text-[var(--accent-blue)] cursor-pointer transition py-2 border-b border-gray-100'>
                             <Link href="/home#features" className='cursor-pointer' onClick={closeMenu}>Features</Link>
                         </li>
-                        <li className='hover:text-green-400 cursor-pointer transition py-2 border-b border-gray-800'>
+                        <li className='hover:text-[var(--accent-blue)] cursor-pointer transition py-2 border-b border-gray-100'>
                             <Link href="/pricing" className='cursor-pointer' onClick={closeMenu}>Pricing</Link>
                         </li>
                     </ul>
@@ -110,12 +110,12 @@ const NavBar = () => {
                     {/* Login/Signup Buttons - Mobile */}
                     <div className='flex flex-col gap-3 mt-6'>
                         <Link href="/login" onClick={closeMenu}>
-                            <button className='w-full px-5 py-2.5 text-sm font-medium text-white border border-gray-600 rounded-full hover:border-green-400 transition-all duration-300'>
+                            <button className='w-full px-5 py-2.5 text-sm font-medium text-[var(--primary-navy)] border border-gray-200 rounded-full hover:border-[var(--accent-blue)] transition-all duration-300'>
                                 Login
                             </button>
                         </Link>
                         <Link href="/signup" onClick={closeMenu}>
-                            <button className='w-full px-5 py-2.5 text-sm font-medium text-gray-950 bg-gradient-to-r from-[#9dffa1] to-[#63a567] rounded-full hover:shadow-lg hover:shadow-green-400/50 transition-all duration-300'>
+                            <button className='w-full px-5 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-[var(--accent-blue)] to-[var(--accent-gold)] rounded-full hover:shadow-lg transition-all duration-300'>
                                 Sign Up
                             </button>
                         </Link>

@@ -72,14 +72,14 @@ const features: Feature[] = [
 
 const FeatureComparison = () => {
     return (
-        <div className="bg-gray-950 py-16 px-4">
+        <div className="bg-[var(--light-bg)] py-16 px-4">
             <div className="max-w-7xl mx-auto">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-3xl md:text-4xl font-bold text-white text-center mb-12"
+                    className="text-3xl md:text-4xl font-bold text-[var(--primary-navy)] text-center mb-12"
                 >
                     Compare Features
                 </motion.h2>
@@ -87,11 +87,11 @@ const FeatureComparison = () => {
                 <div className="overflow-x-auto">
                     <table className="w-full border-collapse">
                         <thead>
-                            <tr className="border-b border-gray-800">
-                                <th className="text-left py-4 px-6 text-white font-semibold">Feature</th>
-                                <th className="text-center py-4 px-6 text-white font-semibold">Silver</th>
-                                <th className="text-center py-4 px-6 text-white font-semibold">Gold</th>
-                                <th className="text-center py-4 px-6 text-white font-semibold">Platinum</th>
+                            <tr className="border-b border-gray-200">
+                                <th className="text-left py-4 px-6 text-[var(--primary-navy)] font-bold">Feature</th>
+                                <th className="text-center py-4 px-6 text-[var(--primary-navy)] font-bold">Silver</th>
+                                <th className="text-center py-4 px-6 text-[var(--primary-navy)] font-bold">Gold</th>
+                                <th className="text-center py-4 px-6 text-[var(--primary-navy)] font-bold">Platinum</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -102,18 +102,18 @@ const FeatureComparison = () => {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.4, delay: index * 0.05 }}
-                                    className="border-b border-gray-800 hover:bg-gray-900/50 transition-colors"
+                                    className="border-b border-gray-200 hover:bg-white/50 transition-colors"
                                 >
                                     <td className="py-4 px-6">
                                         <div>
-                                            <p className="text-white font-medium">{feature.name}</p>
-                                            <p className="text-gray-400 text-sm mt-1">{feature.description}</p>
+                                            <p className="text-[var(--primary-navy)] font-medium">{feature.name}</p>
+                                            <p className="text-[var(--charcoal)] text-sm mt-1">{feature.description}</p>
                                         </div>
                                     </td>
                                     <td className="text-center py-4 px-6">
                                         {feature.silver ? (
                                             <svg
-                                                className="w-6 h-6 text-[#63a567] mx-auto"
+                                                className="w-6 h-6 text-[var(--accent-blue)] mx-auto"
                                                 fill="none"
                                                 stroke="currentColor"
                                                 viewBox="0 0 24 24"
@@ -127,7 +127,7 @@ const FeatureComparison = () => {
                                             </svg>
                                         ) : (
                                             <svg
-                                                className="w-6 h-6 text-gray-600 mx-auto"
+                                                className="w-6 h-6 text-gray-300 mx-auto"
                                                 fill="none"
                                                 stroke="currentColor"
                                                 viewBox="0 0 24 24"
@@ -144,7 +144,7 @@ const FeatureComparison = () => {
                                     <td className="text-center py-4 px-6">
                                         {feature.gold ? (
                                             <svg
-                                                className="w-6 h-6 text-[#63a567] mx-auto"
+                                                className="w-6 h-6 text-[var(--accent-blue)] mx-auto"
                                                 fill="none"
                                                 stroke="currentColor"
                                                 viewBox="0 0 24 24"
@@ -158,7 +158,7 @@ const FeatureComparison = () => {
                                             </svg>
                                         ) : (
                                             <svg
-                                                className="w-6 h-6 text-gray-600 mx-auto"
+                                                className="w-6 h-6 text-gray-300 mx-auto"
                                                 fill="none"
                                                 stroke="currentColor"
                                                 viewBox="0 0 24 24"
@@ -175,7 +175,7 @@ const FeatureComparison = () => {
                                     <td className="text-center py-4 px-6">
                                         {feature.platinum ? (
                                             <svg
-                                                className="w-6 h-6 text-[#63a567] mx-auto"
+                                                className="w-6 h-6 text-[var(--accent-gold)] mx-auto"
                                                 fill="none"
                                                 stroke="currentColor"
                                                 viewBox="0 0 24 24"
@@ -189,7 +189,7 @@ const FeatureComparison = () => {
                                             </svg>
                                         ) : (
                                             <svg
-                                                className="w-6 h-6 text-gray-600 mx-auto"
+                                                className="w-6 h-6 text-gray-300 mx-auto"
                                                 fill="none"
                                                 stroke="currentColor"
                                                 viewBox="0 0 24 24"

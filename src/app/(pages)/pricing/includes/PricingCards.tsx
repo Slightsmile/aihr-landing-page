@@ -59,7 +59,7 @@ const pricingTiers: PricingTier[] = [
 
 const PricingCards = () => {
     return (
-        <div className="bg-gray-950 py-16 px-4">
+        <div className="bg-[var(--light-bg)] py-16 px-4">
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {pricingTiers.map((tier, index) => (
@@ -68,34 +68,34 @@ const PricingCards = () => {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className={`relative bg-gray-900 rounded-3xl p-8 border-2 ${tier.popular ? 'border-[#63a567]' : 'border-gray-800'
-                                } hover:border-[#63a567] transition-all duration-300 hover:scale-105 flex flex-col`}
+                            className={`relative bg-[var(--card-bg)] rounded-3xl p-8 border ${tier.popular ? 'border-[var(--accent-gold)] shadow-lg' : 'border-gray-100 shadow-md'
+                                } hover:border-[var(--accent-gold)] transition-all duration-300 hover:scale-105 flex flex-col`}
                         >
                             {tier.popular && (
-                                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#63a567] text-white px-4 py-1 rounded-full text-sm font-semibold">
+                                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[var(--accent-gold)] text-white px-4 py-1 rounded-full text-sm font-semibold shadow-md">
                                     Most Popular
                                 </div>
                             )}
 
                             <div className="mb-6">
-                                <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                                <p className="text-gray-400 text-sm">{tier.users}</p>
+                                <h3 className="text-2xl font-bold text-[var(--primary-navy)] mb-2">{tier.name}</h3>
+                                <p className="text-[var(--charcoal)] text-sm">{tier.users}</p>
                             </div>
 
                             <div className="mb-8">
                                 <div className="flex items-baseline">
-                                    <span className="text-5xl font-bold text-white">{tier.price}</span>
-                                    <span className="text-gray-400 ml-2">{tier.period}</span>
+                                    <span className="text-5xl font-bold text-[var(--primary-navy)]">{tier.price}</span>
+                                    <span className="text-[var(--charcoal)] ml-2">{tier.period}</span>
                                 </div>
                             </div>
 
                             <div className="mb-8 flex-grow">
-                                <p className="text-sm font-semibold text-gray-300 mb-4">Includes</p>
+                                <p className="text-sm font-semibold text-[var(--secondary-navy)] mb-4">Includes</p>
                                 <ul className="space-y-3">
                                     {tier.features.map((feature, idx) => (
                                         <li key={idx} className="flex items-start">
                                             <svg
-                                                className="w-5 h-5 text-[#63a567] mr-3 mt-0.5 flex-shrink-0"
+                                                className="w-5 h-5 text-[var(--accent-blue)] mr-3 mt-0.5 flex-shrink-0"
                                                 fill="none"
                                                 stroke="currentColor"
                                                 viewBox="0 0 24 24"
@@ -107,7 +107,7 @@ const PricingCards = () => {
                                                     d="M5 13l4 4L19 7"
                                                 />
                                             </svg>
-                                            <span className="text-gray-300 text-sm">{feature}</span>
+                                            <span className="text-[var(--charcoal)] text-sm">{feature}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -117,8 +117,8 @@ const PricingCards = () => {
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 className={`w-full py-3 px-6 rounded-full font-semibold transition-all mt-auto ${tier.popular
-                                    ? 'bg-[#63a567] text-white hover:bg-[#5a9460]'
-                                    : 'bg-gray-800 text-white hover:bg-gray-700 border border-gray-700'
+                                    ? 'bg-gradient-to-r from-[var(--accent-blue)] to-[var(--accent-gold)] text-white hover:opacity-90'
+                                    : 'bg-[var(--light-bg)] text-[var(--primary-navy)] hover:bg-gray-200 border border-gray-200'
                                     }`}
                             >
                                 Get Started

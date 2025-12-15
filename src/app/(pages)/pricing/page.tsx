@@ -6,7 +6,7 @@ import FeatureComparison from './includes/FeatureComparison';
 
 export default function PricingPage() {
     return (
-        <div className="min-h-screen bg-gray-950">
+        <div className="min-h-screen bg-[var(--light-bg)]">
             <PricingHero />
             <PricingCards />
             <FeatureComparison />

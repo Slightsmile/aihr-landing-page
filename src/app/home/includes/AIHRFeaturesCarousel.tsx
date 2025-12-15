@@ -172,7 +172,7 @@ export default function AIHRFeaturesCarousel() {
 
     return (
         <div
-            className="flex flex-col items-center min-h-[600px] md:min-h-[700px] h-full justify-center w-full overflow-hidden select-none relative bg-gray-950 py-8 md:py-10"
+            className="flex flex-col items-center min-h-[600px] md:min-h-[700px] h-full justify-center w-full overflow-hidden select-none relative bg-[var(--light-bg)] py-8 md:py-10"
             onMouseDown={(e) => handleStart(e.clientX)}
             onMouseMove={(e) => handleMove(e.clientX)}
             onMouseUp={handleEnd}
@@ -182,8 +182,8 @@ export default function AIHRFeaturesCarousel() {
             onTouchEnd={handleEnd}
         >
             {/* Subtle background blur elements matching the page */}
-            <div className="animate-pulse absolute top-20 right-10 w-64 h-64 bg-[#0d1a0d] rounded-full blur-3xl pointer-events-none opacity-50" />
-            <div className="animate-pulse absolute bottom-20 left-10 w-64 h-64 bg-[#0d1a0d] rounded-full blur-3xl pointer-events-none opacity-50" />
+            <div className="animate-pulse absolute top-20 right-10 w-64 h-64 bg-blue-50 rounded-full blur-3xl pointer-events-none opacity-50 mix-blend-multiply" />
+            <div className="animate-pulse absolute bottom-20 left-10 w-64 h-64 bg-amber-50 rounded-full blur-3xl pointer-events-none opacity-50 mix-blend-multiply" />
 
             <div className="relative w-full h-full flex items-center justify-center z-10 overflow-visible py-20">
                 {featureCards.map((card, index) => {
@@ -213,9 +213,9 @@ export default function AIHRFeaturesCarousel() {
                             key={card.id}
                             className={`absolute w-[80vw] sm:w-[320px] md:w-[380px] lg:w-[450px] xl:w-[480px]
               h-[420px] sm:h-[440px] md:h-[460px] lg:h-[500px] rounded-3xl
-              border-2 border-[#5a854d] shadow-2xl flex flex-col
-              text-white font-medium transition-all duration-700 ease-in-out p-5 sm:p-6 md:p-7 lg:p-8 overflow-hidden cursor-grab
-              active:cursor-grabbing bg-[#0f1a0f]`}
+              border border-gray-100 shadow-2xl flex flex-col
+              text-[var(--primary-navy)] font-medium transition-all duration-700 ease-in-out p-5 sm:p-6 md:p-7 lg:p-8 overflow-hidden cursor-grab
+              active:cursor-grabbing bg-[var(--card-bg)]`}
                             style={{
                                 transform,
                                 zIndex: pos.zIndex,
@@ -225,33 +225,33 @@ export default function AIHRFeaturesCarousel() {
                             }}
                         >
                             {/* Subtle background decorative gradient */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-[#1a2e1a]/30 via-transparent to-[#0d1a0d]/30 pointer-events-none" />
-                            <div className="absolute top-0 right-0 w-40 h-40 bg-[#2f4930]/20 rounded-full blur-3xl" />
-                            <div className="absolute bottom-0 left-0 w-40 h-40 bg-[#1a2e1a]/20 rounded-full blur-3xl" />
+                            <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-amber-50/30 pointer-events-none" />
+                            <div className="absolute top-0 right-0 w-40 h-40 bg-blue-50/50 rounded-full blur-3xl" />
+                            <div className="absolute bottom-0 left-0 w-40 h-40 bg-amber-50/50 rounded-full blur-3xl" />
 
                             {/* Card Content */}
                             <div className="relative z-10 h-full flex flex-col">
                                 {/* Header */}
                                 <div className="flex items-start gap-3 md:gap-4 mb-4">
-                                    <div className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full flex items-center justify-center backdrop-blur-sm shrink-0 border-2 border-[#9dffa1]/60 bg-[#1a2e1a]/80">
-                                        <span className="text-xl md:text-2xl lg:text-3xl">{card.icon}</span>
+                                    <div className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full flex items-center justify-center backdrop-blur-sm shrink-0 border border-gray-100 bg-white shadow-sm">
+                                        <span className="text-xl md:text-2xl lg:text-3xl filter drop-shadow-sm">{card.icon}</span>
                                     </div>
-                                    <h2 className="text-base md:text-lg lg:text-xl xl:text-2xl font-bold leading-tight pt-1 text-white">{card.title}</h2>
+                                    <h2 className="text-base md:text-lg lg:text-xl xl:text-2xl font-bold leading-tight pt-1 text-[var(--primary-navy)]">{card.title}</h2>
                                 </div>
 
                                 {/* Description */}
-                                <p className="text-xs md:text-sm lg:text-base leading-relaxed text-gray-300 mb-5">
+                                <p className="text-xs md:text-sm lg:text-base leading-relaxed text-[var(--charcoal)] mb-5">
                                     {card.description}
                                 </p>
 
                                 {/* Detailed Features - Bullet Points */}
                                 <div className="flex-1 mb-5 overflow-y-auto scrollbar-hide">
-                                    <h3 className="text-xs md:text-sm font-semibold text-[#9dffa1] mb-3 uppercase tracking-wide">Key Features</h3>
+                                    <h3 className="text-xs md:text-sm font-bold text-[var(--accent-blue)] mb-3 uppercase tracking-wide">Key Features</h3>
                                     <ul className="space-y-2 md:space-y-2.5">
                                         {card.details.map((detail, idx) => (
-                                            <li key={idx} className="flex items-start gap-2 text-xs md:text-sm text-gray-200">
-                                                <span className="text-[#9dffa1] mt-0.5 shrink-0 font-bold">✓</span>
-                                                <span className="leading-relaxed">{detail}</span>
+                                            <li key={idx} className="flex items-start gap-2 text-xs md:text-sm text-[var(--secondary-navy)]">
+                                                <span className="text-[var(--accent-gold)] mt-0.5 shrink-0 font-bold">✓</span>
+                                                <span className="leading-relaxed font-medium">{detail}</span>
                                             </li>
                                         ))}
                                     </ul>
@@ -260,13 +260,13 @@ export default function AIHRFeaturesCarousel() {
                                 {/* Button */}
                                 <a href="/pricing" className="mt-auto">
                                     <button
-                                        className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full transition-all text-xs md:text-sm font-semibold hover:scale-105 active:scale-95 duration-300"
-                                        style={{ background: 'linear-gradient(135deg, #5e5e5e, #074a0a)', padding: '2px', borderRadius: '9999px' }}
+                                        className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full transition-all text-xs md:text-sm font-semibold hover:scale-105 active:scale-95 duration-300 group"
+                                        style={{ background: 'linear-gradient(135deg, var(--accent-blue), var(--accent-gold))', padding: '2px', borderRadius: '9999px' }}
                                     >
-                                        <span className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-t from-[#92eb95] via-[#9dffa1] to-[#c3ffc6] text-[#2d4c2e] font-semibold w-full">
+                                        <span className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-white text-[var(--primary-navy)] font-bold w-full group-hover:bg-opacity-95 transition-all">
                                             {card.buttonText}
                                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="var(--accent-blue)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                                             </svg>
                                         </span>
                                     </button>
@@ -288,8 +288,8 @@ export default function AIHRFeaturesCarousel() {
                             setTimeout(() => setIsAutoRotating(true), 10000);
                         }}
                         className={`w-2 h-2 rounded-full transition-all duration-500 ${index === current
-                            ? 'bg-[#9dffa1] w-8'
-                            : 'bg-gray-600 hover:bg-gray-500'
+                            ? 'bg-[var(--accent-gold)] w-8'
+                            : 'bg-gray-300 hover:bg-gray-400'
                             }`}
                         aria-label={`Go to slide ${index + 1}`}
                     />

@@ -1,14 +1,14 @@
 
-'use client' 
+'use client'
 import React from 'react';
-import Hero from './includes/Hero'; 
-import LifeAtDrc from './includes/LifeAtDrc'; 
-import GetInTouch from '../../components/common/GetInTouch'; 
+import Hero from './includes/Hero';
+import LifeAtDrc from './includes/LifeAtDrc';
+import GetInTouch from '../../components/common/GetInTouch';
 
 const page = () => {
     return (
         <>
-            <div className='bg-gray-950'>
+            <div className='bg-[var(--light-bg)]'>
                 <Hero />
                 <LifeAtDrc />
                 <GetInTouch />
