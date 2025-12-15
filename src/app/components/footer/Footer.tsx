@@ -27,8 +27,8 @@ const Footer = () => {
 
             <div className='flex flex-col sm:flex-row sm:space-x-4 md:space-x-8 space-y-2 sm:space-y-0 text-xs sm:text-sm text-[var(--charcoal)]'>
               <span>Opening hours: 9am—6pm</span>
-              <span>Privacy Policy</span>
-              <span>Terms & Conditions</span>
+              <a href="/privacy" className='hover:text-[var(--accent-blue)] cursor-pointer transition-colors'>Privacy Policy</a>
+              <a href="/terms" className='hover:text-[var(--accent-blue)] cursor-pointer transition-colors'>Terms & Conditions</a>
             </div>
           </div>
 
@@ -44,7 +44,7 @@ const Footer = () => {
         </div>
 
         <div className='flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 pt-6 sm:pt-8 border-t border-gray-200'>
-          <p className='text-xs sm:text-sm text-[var(--charcoal)]'>Copyright © 2025 DRC</p>
+          <p className='text-xs sm:text-sm text-[var(--charcoal)]'>Copyright © 2025 AIHR</p>
           <button
             onClick={scrollToTop}
             className='w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-r from-[var(--accent-blue)] to-[var(--accent-gold)] flex items-center justify-center 
