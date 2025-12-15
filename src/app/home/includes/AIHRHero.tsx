@@ -376,10 +376,7 @@ const StackingCard: React.FC<StackingCardProps> = ({
   const isPrevious = currentCardIndex > index;
 
   const getCardOpacity = () => {
-    if (prefersReducedMotion || !isDesktop) return 1;
-    if (isActive) return 1;
-    if (isPrevious) return 0.6;
-    return 0.85;
+    return 1;
   };
 
   const getCardBlur = () => {
@@ -408,7 +405,7 @@ const StackingCard: React.FC<StackingCardProps> = ({
           duration: 0.5,
           ease: 'easeOut'
         }}
-        className="relative w-full max-w-[650px] h-[350px] md:h-[400px] rounded-4xl p-8 md:p-12 shadow-[0_0_30px_rgba(0,0,0,0.15)] text-[var(--primary-navy)] overflow-hidden border border-gray-100 bg-[var(--card-bg)]"
+        className="relative w-full max-w-[650px] h-[350px] md:h-[400px] rounded-4xl p-8 md:p-12 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] border border-gray-200/50 bg-[var(--card-bg)] text-[var(--primary-navy)] overflow-hidden"
       >
         {/* Background decorative elements */}
         <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-50 rounded-full blur-3xl opacity-80" />
