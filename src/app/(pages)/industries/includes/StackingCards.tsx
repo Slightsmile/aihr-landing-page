@@ -24,7 +24,7 @@ const defaultCards: CardData[] = [
     id: '1',
     title: 'Recruitment & Talent Acquisition',
     description: 'AI scans CVs, matches candidates to job descriptions, and analyzes video interviews to streamline hiring.',
-    color: '#030712',
+    color: '#ffffff',
     buttonText: 'Explore Offers',
     icon: <span>🎯</span>,
   },
@@ -32,7 +32,7 @@ const defaultCards: CardData[] = [
     id: '2',
     title: 'Employee Onboarding Chatbot',
     description: 'AI provides personalized onboarding through chatbots, guiding new hires through paperwork, training, and compliance.',
-    color: '#030712',
+    color: '#ffffff',
     buttonText: 'Explore Offers',
     icon: <span>🤝</span>,
   },
@@ -40,7 +40,7 @@ const defaultCards: CardData[] = [
     id: '3',
     title: 'Employee Engagement & Retention',
     description: 'AI predicts attrition risks and suggests interventions to retain top talent.',
-    color: '#030712',
+    color: '#ffffff',
     buttonText: 'Explore Offers',
     icon: <span>💚</span>,
   },
@@ -48,7 +48,7 @@ const defaultCards: CardData[] = [
     id: '4',
     title: 'Performance Management',
     description: 'AI offers data-driven evaluations, detects burnout, and reduces bias in performance reviews.',
-    color: '#030712',
+    color: '#ffffff',
     buttonText: 'Explore Offers',
     icon: <span>📊</span>,
   },
@@ -56,7 +56,7 @@ const defaultCards: CardData[] = [
     id: '5',
     title: 'Learning & Development (L&D)',
     description: 'AI personalizes training by identifying skill gaps and recommending adaptive learning modules.',
-    color: '#030712',
+    color: '#ffffff',
     buttonText: 'Explore Offers',
     icon: <span>📚</span>,
   },
@@ -64,7 +64,7 @@ const defaultCards: CardData[] = [
     id: '6',
     title: 'Diversity, Equity & Inclusion (DEI)',
     description: 'AI ensures fairness by reducing bias in hiring, promotions, and job descriptions.',
-    color: '#030712',
+    color: '#ffffff',
     buttonText: 'Explore Offers',
     icon: <span>🌈</span>,
   },
@@ -72,7 +72,7 @@ const defaultCards: CardData[] = [
     id: '7',
     title: 'HR Chatbots & Self-Service',
     description: 'AI-powered chatbots answer HR queries instantly, reducing support costs.',
-    color: '#030712',
+    color: '#ffffff',
     buttonText: 'Explore Offers',
     icon: <span>💬</span>,
   },
@@ -80,7 +80,7 @@ const defaultCards: CardData[] = [
     id: '8',
     title: 'Workforce Planning & Forecasting',
     description: 'AI predicts workforce needs, helping HR align staffing with business strategy.',
-    color: '#030712',
+    color: '#ffffff',
     buttonText: 'Explore Offers',
     icon: <span>🔮</span>,
   },
@@ -94,7 +94,7 @@ const StackingCards: React.FC<StackingCardsProps> = ({ cards = defaultCards }) =
   });
 
   return (
-    <div id="features" ref={container} className="relative bg-gray-950">
+    <div id="features" ref={container} className="relative bg-[var(--light-bg)] pt-10">
       {cards.map((card, i) => {
         const targetScale = 1 - (cards.length - i) * 0.05;
         // Calculate range dynamically to ensure consistent behavior for all cards
@@ -152,34 +152,34 @@ const Card: React.FC<CardProps> = ({ index, title, description, color, buttonTex
           backgroundColor: color, scale, top: `calc(-5vh + ${index * 25}px)`, transformOrigin: 'top',
         }}
         transition={{ duration: 0.5, ease: 'easeOut', }}
-        className="relative flex flex-col md:flex-row items-center w-[95vw] md:w-[1400px] h-auto md:h-[500px] rounded-4xl p-8 md:p-12 shadow-2xl text-white overflow-hidden border-2 border-[#444c45]">
+        className="relative flex flex-col md:flex-row items-center w-[95vw] md:w-[1400px] h-auto md:h-[500px] rounded-4xl p-8 md:p-12 shadow-xl text-[var(--primary-navy)] overflow-hidden border border-gray-100">
 
-        <div className="absolute -top-10 -left-20 w-80 h-80 bg-[#202f22] rounded-full blur-3xl" />
-        <div className="absolute -top-10 -right-50 w-160 h-160 bg-[#2f4930] rounded-full blur-3xl" />
+        <div className="absolute -top-10 -left-20 w-80 h-80 bg-blue-50 rounded-full blur-3xl opacity-50" />
+        <div className="absolute -top-10 -right-50 w-160 h-160 bg-blue-50 rounded-full blur-3xl opacity-50" />
 
         <div className="absolute inset-0 opacity-10 overflow-hidden">
-          <div className="absolute top-10 right-20 w-40 h-40 rounded-full border border-white/20"></div>
-          <div className="absolute bottom-10 right-10 w-32 h-32 rounded-full border border-white/20"></div>
-          <div className="absolute top-1/2 right-1/4 w-24 h-24 rounded-full border border-white/20"></div>
+          <div className="absolute top-10 right-20 w-40 h-40 rounded-full border border-blue-200"></div>
+          <div className="absolute bottom-10 right-10 w-32 h-32 rounded-full border border-blue-200"></div>
+          <div className="absolute top-1/2 right-1/4 w-24 h-24 rounded-full border border-blue-200"></div>
         </div>
 
         {/* Left Content */}
         <div className="w-full md:w-1/2 relative z-10 flex flex-col gap-4 md:gap-6 mb-8 md:mb-0">
           <div className="flex items-start gap-4 md:gap-6">
-            <div className="w-20 h-20 md:w-28 md:h-28 rounded-full flex items-center justify-center backdrop-blur-sm shrink-0 border-2 border-[#b8c9ba]">
+            <div className="w-20 h-20 md:w-28 md:h-28 rounded-full flex items-center justify-center backdrop-blur-sm shrink-0 border border-blue-100 bg-blue-50 text-[var(--accent-blue)]">
               <span className="text-3xl md:text-4xl">{icon}</span>
             </div>
-            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold leading-tight pt-2">{title}</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold leading-tight pt-2 text-[var(--primary-navy)]">{title}</h2>
           </div>
-          <p className="text-sm md:text-base leading-relaxed text-white/90 pr-0 md:pr-4">{description}</p>
+          <p className="text-sm md:text-base leading-relaxed text-[var(--charcoal)] pr-0 md:pr-4">{description}</p>
 
           <Link href="/pricing">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-3 mt-4 px-8 py-3 rounded-full transition-all w-fit text-sm md:text-base font-semibold"
-              style={{ background: 'linear-gradient(135deg, #5e5e5e, #074a0a)', padding: '2px', borderRadius: '9999px', }}>
-              <span className="flex items-center gap-3 px-6 py-2 rounded-full bg-gradient-to-t from-[#92eb95] via-[#9dffa1] to-[#c3ffc6] text-[#2d4c2e] font-semibold">
+              style={{ background: 'linear-gradient(135deg, var(--accent-blue), var(--accent-gold))', padding: '2px', borderRadius: '9999px', }}>
+              <span className="flex items-center gap-3 px-6 py-2 rounded-full bg-white text-[var(--primary-navy)] font-semibold transition-colors group-hover:bg-opacity-95">
                 {buttonText}
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

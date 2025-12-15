@@ -5,7 +5,7 @@ import GlobalStudies from './include/GlobalStudies';
 
 const page = () => {
     return (
-        <div className='bg-gray-950'>
+        <div className='bg-[var(--light-bg)]'>
             <Hero />
             <CustomerStore />
             <GlobalStudies />
