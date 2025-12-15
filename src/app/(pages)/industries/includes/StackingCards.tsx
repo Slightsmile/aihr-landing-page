@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
-import { StackingCart, StackingSetting, StackingBackdropIcon } from '@/app/static/icons';
+import { StackingSetting, StackingBackdropIcon } from '@/app/static/icons';
 import Link from 'next/link';
 
 
