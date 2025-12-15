@@ -4,7 +4,7 @@ import MilestoneTimeline from './includes/MilestoneTimeline';
 
 const page = () => {
     return (
-        <div className='bg-gray-950'>
+        <div className='bg-[var(--light-bg)]'>
             <Hero />
             <MilestoneTimeline />
         </div>
