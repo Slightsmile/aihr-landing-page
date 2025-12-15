@@ -2,6 +2,7 @@
 'use client'
 
 import React from 'react'
+import Link from 'next/link'
 
 
 const Footer = () => {
@@ -27,18 +28,18 @@ const Footer = () => {
 
             <div className='flex flex-col sm:flex-row sm:space-x-4 md:space-x-8 space-y-2 sm:space-y-0 text-xs sm:text-sm text-[var(--charcoal)]'>
               <span>Opening hours: 9am—6pm</span>
-              <a href="/privacy" className='hover:text-[var(--accent-blue)] cursor-pointer transition-colors'>Privacy Policy</a>
-              <a href="/terms" className='hover:text-[var(--accent-blue)] cursor-pointer transition-colors'>Terms & Conditions</a>
+              <Link href="/privacy" className='hover:text-[var(--accent-blue)] cursor-pointer transition-colors'>Privacy Policy</Link>
+              <Link href="/terms" className='hover:text-[var(--accent-blue)] cursor-pointer transition-colors'>Terms & Conditions</Link>
             </div>
           </div>
 
           <div className='md:text-right'>
             <p className='text-base sm:text-lg font-semibold mb-4 sm:mb-6 lg:mb-8 text-[var(--primary-navy)]'>Services</p>
             <div className='space-y-3 sm:space-y-4 text-sm sm:text-base'>
-              <a href="/about" className='hover:text-[var(--accent-gold)] transition-colors cursor-pointer block'>About Us</a>
-              <a href="/history" className='hover:text-[var(--accent-gold)] transition-colors cursor-pointer block'>History</a>
-              <a href="/career" className='hover:text-[var(--accent-gold)] transition-colors cursor-pointer block'>Careers</a>
-              <a href="/contact" className='hover:text-[var(--accent-gold)] transition-colors cursor-pointer block'>Contacts Us</a>
+              <Link href="/about" className='hover:text-[var(--accent-gold)] transition-colors cursor-pointer block'>About Us</Link>
+              <Link href="/history" className='hover:text-[var(--accent-gold)] transition-colors cursor-pointer block'>History</Link>
+              <Link href="/career" className='hover:text-[var(--accent-gold)] transition-colors cursor-pointer block'>Careers</Link>
+              <Link href="/contact" className='hover:text-[var(--accent-gold)] transition-colors cursor-pointer block'>Contacts Us</Link>
             </div>
           </div>
         </div>
